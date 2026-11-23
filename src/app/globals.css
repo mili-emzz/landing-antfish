@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+:root {
+  --background: #150a1f;
+  --foreground: #f6f1fa;
+  --surface: rgba(44, 28, 58, 0.72);
+  --surface-solid: #25162f;
+  --border-soft: rgba(255, 255, 255, 0.09);
+  --gold: #d6bc82;
+  --gold-soft: #e6d3a3;
+  --coral: #e0707e;
+  --mint: #4ade9c;
+  --muted: #a99bb6;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-solid: var(--surface-solid);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-coral: var(--coral);
+  --color-mint: var(--mint);
+  --color-muted: var(--muted);
+  --color-line: var(--border-soft);
+  --font-sans: var(--font-dm-sans);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background-color: var(--background);
+  background-image:
+    radial-gradient(900px 600px at 85% 8%, rgba(98, 52, 140, 0.35), transparent 70%),
+    radial-gradient(700px 500px at 0% 35%, rgba(70, 32, 100, 0.22), transparent 70%),
+    radial-gradient(900px 600px at 50% 100%, rgba(60, 28, 90, 0.18), transparent 70%);
+  background-attachment: fixed;
+  color: var(--foreground);
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
+}
+
+.display {
+  letter-spacing: -0.045em;
+  line-height: 0.98;
+  font-weight: 400;
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.glass {
+  background: linear-gradient(160deg, rgba(60, 40, 76, 0.7), rgba(34, 21, 46, 0.7));
+  border: 1px solid var(--border-soft);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.6);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
