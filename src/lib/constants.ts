@@ -4,7 +4,7 @@ export const SITE = {
   email: "antfish-soporte@gmail.com",
   apkUrl:
     process.env.NEXT_PUBLIC_APK_URL ??
-    "https://github.com/mili-emzz/antfish-frontend/releases/download/v1.0.0/app-release.apk",
+    "https://github.com/mili-emzz/antfish-frontend/releases/download/v1.0.1/app-release.apk",
   legalUpdated: "20 de noviembre de 2026",
 };
 
